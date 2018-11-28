@@ -3,6 +3,7 @@
 using namespace std;
 
 int sum(int num);
+int product(int num);
 
 int main(){
   int num = 0;
@@ -10,7 +11,8 @@ int main(){
   cout << "Please enter a number: " << endl;
   cin >> num;
 
-  cout << sum(num) << endl;
+  cout << "The Sum is: " << sum(num) << endl;
+  cout << "The Product is: " << product(num) << endl;
 
   
   
@@ -24,4 +26,13 @@ int sum(int num){
     sum += i;
   }
   return sum;
+}
+
+int product(int num){
+  int product = 1;
+
+  for(int i = 1; i <= num; i++){
+    product *= i;
+  }
+  return product;
 }
